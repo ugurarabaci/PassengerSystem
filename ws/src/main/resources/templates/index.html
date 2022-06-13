@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Flight Management System</title>
+</head>
+<body>
+<div align="center">
+    <h1>Flight List</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Flight Id</th>
+            <th>Flight departure</th>
+            <th>Flight Arrival</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="flight : ${flightList}">
+            <td th:text="${flight.id}"></td>
+            <td th:text="${flight.departure}"></td>
+            <td th:text="${flight.arrival}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
